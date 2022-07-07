@@ -18,7 +18,7 @@ export default function DropDown({ dropdown_text, options }) {
                         <img src={options_icon} alt="Options" className="h-6 w-6 mx-1 cursor-pointer" />
                     </Menu.Button>
                 }
-                {dropdown_text != 'more-options' &&
+                {dropdown_text !== 'more-options' &&
                     <Menu.Button className="inline-flex justify-center items-center w-full bg-red text-white px-3 py-1 m-1 rounded-md
                     hover:bg-red-variant transition-all ease-in-out">
                         {dropdown_text}

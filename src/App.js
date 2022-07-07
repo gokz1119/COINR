@@ -1,5 +1,4 @@
 import './App.css';
-import NavBar from './NavBar';
 import Signup from './Signup';
 import Swap from './Swap';
 import Withdraw from './Withdraw';
