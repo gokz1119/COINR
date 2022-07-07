@@ -12,7 +12,7 @@ export default function Input({ placeholder, isDisabled, type }) {
         <>
             {(!isDisabled && type === 'number') &&
                 <input type={type} className='bg-blue-secondary text-white text-xl rounded-md 
-                    text-left border-none mr-4 px-2 py-2 tracking-widest focus:outline-none 
+                    text-left border-none px-2 py-2 tracking-wider focus:outline-none 
                     placeholder:text-white'
                     placeholder={placeholder}
                     onFocus={(e) => e.target.placeholder = ''}
@@ -20,7 +20,7 @@ export default function Input({ placeholder, isDisabled, type }) {
             }
             {(isDisabled && type === 'number') &&
                 <input type={type} className='bg-blue-secondary text-white text-xl rounded-md 
-                    text-left border-none mr-4 px-2 py-2 tracking-widest focus:outline-none 
+                    text-left border-none px-2 py-2 tracking-wider focus:outline-none 
                     placeholder:text-white'
                     placeholder={placeholder} disabled
                     onFocus={(e) => e.target.placeholder = ''}

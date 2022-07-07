@@ -11,7 +11,7 @@ export default function Button({ bg_color, text, size }) {
             }
             {(bg_color === "red" && size === "small") &&
                 <button className="bg-red text-white px-3 py-1 m-1 rounded-lg
-                    hover:bg-red-secondary transition-all ease-in-out">
+                    hover:bg-red-variant transition-all ease-in-out">
                     {text}
                 </button>
             }
@@ -36,7 +36,7 @@ export default function Button({ bg_color, text, size }) {
             }
             {(bg_color === "red" && size === "large") &&
                 <button className="bg-red text-white text-xl w-full py-2 m-1 rounded-xl
-                hover:bg-red-secondary transition-all ease-in-out">
+                hover:bg-red-variant transition-all ease-in-out">
                     {text}
                 </button>
             }

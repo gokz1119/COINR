@@ -5,9 +5,10 @@ import eth_illustration from './Icons/ethereum-illustration.svg'
 
 export default function Login() {
     return (
-        <div className='flex justify-evenly items-center w-screen h-screen bg-blue-background'>
-            <img src={eth_illustration} alt="Ethereum Illustration" />
-            <div className='bg-blue-tertiary p-8 rounded-xl w-1/3'>
+        <div className='flex flex-col-reverse justify-center items-center w-screen h-screen bg-blue-background
+                        md:flex-row md:justify-evenly'>
+            <img src={eth_illustration} alt="Ethereum Illustration" className='max-w-xs md:max-w-none' />
+            <div className='bg-blue-tertiary p-8 rounded-xl max-w-xs mb-8 md:mb-0 md:max-w-none'>
                 <div className='flex justify-center pb-4'>
                     <span className='text-white text-3xl'>Welcome to</span>
                     <span className="text-blue-primary text-3xl pl-2">CO</span>
