@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Button from './Button'
 import eth_illustration from './Icons/ethereum-illustration.svg'
+import Input from './Input'
 
 export default function Login() {
     return (
@@ -13,12 +14,20 @@ export default function Login() {
                     <span className="text-blue-primary text-3xl pl-2">CO</span>
                     <span className="text-red text-3xl">INR</span>
                 </div>
-                <a href='/swap'>
-                    <Button bg_color={"red"} text={"Login with Metamask"} size={"large"} />
-                </a>
+                <div>
+                    <Input type={"text"} placeholder={"Name"} isDisabled={false} />
+                    <Input type={"email"} placeholder={"Email"} isDisabled={false} />
+                    <Input type={"text"} placeholder={"Wallet Public Address"} isDisabled={false} />
+                    <Input type={"text"} placeholder={"Bank Account Number"} isDisabled={false} />
+                    <a href='/swap' className='mt-3'>
+                        <Button bg_color={"red"} text={"Sign Up"} size={"large"} />
+                    </a>
+                </div>
                 <div className='text-white flex justify-center pt-3'>
-                    <span>Don't have an account?
-                        <Link to={'/signup'} className='no-underline text-blue-primary px-1'>Sign Up</Link>
+                    <span>Already have an account?
+                        <Link to={"/"} >
+                            <span className='no-underline text-blue-primary px-1'>Login</span>
+                        </Link>
                     </span>
                 </div>
             </div>

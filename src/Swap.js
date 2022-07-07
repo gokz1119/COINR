@@ -5,10 +5,12 @@ import rupee_icon from './Icons/rupee-sign-solid.svg'
 import swap_icon from './Icons/swap.svg'
 import Input from './Input'
 import Button from './Button'
+import NavBar from './NavBar'
 
 export default function Swap() {
     return (
         <>
+            <NavBar operation={"swap"} />
             <div className='bg-blue-background w-screen h-screen flex items-center justify-center'>
                 <div className='bg-blue-tertiary rounded-xl py-3 px-4 w-auto max-w-md'>
                     <div className='pb-3 flex justify-between'>
@@ -17,7 +19,7 @@ export default function Swap() {
                     </div>
                     <div className='flex justify-between items-center bg-blue-secondary px-3 rounded-md'>
                         <div className='max-w-4/5'>
-                            <Input placeholder={"0.0"} isDisabled={false} />
+                            <Input type={"number"} placeholder={"0.0"} isDisabled={false} />
                         </div>
                         <img src={eth_icon} alt="Ethereum" className="h-5 w-5" />
                         <span className='text-white text-xl px-2'>ETH</span>
@@ -26,7 +28,7 @@ export default function Swap() {
                         <img src={swap_icon} alt="Swap" className='p-0.5 ml-1 cursor-pointer' />
                     </div>
                     <div className='flex justify-between items-center bg-blue-secondary px-3 rounded-md'>
-                        <Input placeholder={"0.0"} isDisabled={true} />
+                        <Input type={"number"} placeholder={"0.0"} isDisabled={true} />
                         <img src={rupee_icon} alt="Rupee" className="h-5 w-5" />
                         <span className='text-white text-xl px-2'>CINR</span>
                     </div>

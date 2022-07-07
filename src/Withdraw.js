@@ -1,14 +1,15 @@
 import React from 'react'
 import settings_icon from './Icons/settings.svg'
-import eth_icon from './Icons/ethereum.svg'
 import rupee_icon from './Icons/rupee-sign-solid.svg'
 import arrow_icon from './Icons/arrow.svg'
 import Input from './Input'
 import Button from './Button'
+import NavBar from './NavBar'
 
 export default function Withdraw() {
     return (
         <>
+            <NavBar operation={"withdraw"} />
             <div className='bg-blue-background w-screen h-screen flex items-center justify-center'>
                 <div className='bg-blue-tertiary rounded-xl py-3 px-4 w-auto max-w-md'>
                     <div className='pb-3 flex justify-between'>
@@ -17,7 +18,7 @@ export default function Withdraw() {
                     </div>
                     <div className='flex justify-between items-center bg-blue-secondary px-3 rounded-md'>
                         <div className='max-w-4/5'>
-                            <Input placeholder={"0.0"} isDisabled={false} />
+                            <Input type={"number"} placeholder={"0.0"} isDisabled={false} />
                         </div>
                         <img src={rupee_icon} alt="Rupee" className="h-5 w-5" />
                         <span className='text-white text-xl px-2'>CINR</span>
@@ -26,7 +27,7 @@ export default function Withdraw() {
                         <img src={arrow_icon} alt="Arrow" className='p-0.5 ml-1 rotate-90' />
                     </div>
                     <div className='flex justify-between items-center bg-blue-secondary px-3 rounded-md'>
-                        <Input placeholder={"0.0"} isDisabled={true} />
+                        <Input type={"number"} placeholder={"0.0"} isDisabled={true} />
                         <img src={rupee_icon} alt="Ethereum" className="h-5 w-5" />
                         <span className='text-white text-xl px-2'>INR</span>
                     </div>
