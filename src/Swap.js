@@ -12,7 +12,7 @@ export default function Swap() {
         <>
             <NavBar operation={"swap"} />
             <div className='bg-blue-background w-screen h-screen flex items-center justify-center'>
-                <div className='bg-blue-tertiary rounded-xl py-3 px-4 w-auto max-w-xs md:max-w-md'>
+                <div className='bg-blue-tertiary shadow-lg shadow-blue-secondary rounded-xl py-3 px-4 w-auto max-w-xs md:max-w-md'>
                     <div className='pb-3 flex justify-between'>
                         <p className='text-white text-lg ml-2'>Swap</p>
                         <img src={settings_icon} alt="Settings" className="mr-2 cursor-pointer" />

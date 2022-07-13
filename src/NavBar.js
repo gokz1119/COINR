@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Button from './Button'
-import options_icon from './Icons/more-options.svg'
 import DropDown from './Dropdown'
 
 export default function NavBar({ operation }) {
@@ -27,11 +26,11 @@ export default function NavBar({ operation }) {
                     <div className="hidden md:flex justify-center items-center py-2">
                         <Button bg_color={"blue"} text={"Get Started"} size={"small"} />
                         <Button bg_color={"white"} text={"Help"} size={"small"} />
-                        <img src={options_icon} alt="Options" className="h-6 w-6 mx-1 cursor-pointer" />
+                        <DropDown dropdown_text={"desktop-more-options"} options={["Your Profile", "Log Out"]} />
                     </div>
                     <div className='flex justify-center items-center rounded-lg px-1 py-2 my-2 md:hidden'>
                         <DropDown dropdown_text={"Swap"} options={["Withdraw", "Rates"]} />
-                        <DropDown dropdown_text={"more-options"} options={["Get Started", "Help", "Your Profile", "Log Out"]} />
+                        <DropDown dropdown_text={"mobile-more-options"} options={["Get Started", "Help", "Your Profile", "Log Out"]} />
                     </div>
                 </div>
             }
@@ -55,11 +54,11 @@ export default function NavBar({ operation }) {
                 <div className="hidden md:flex justify-center items-center py-2">
                     <Button bg_color={"blue"} text={"Get Started"} size={"small"} />
                     <Button bg_color={"white"} text={"Help"} size={"small"} />
-                    <img src={options_icon} alt="Options" className="h-6 w-6 mx-1 cursor-pointer" />
+                    <DropDown dropdown_text={"desktop-more-options"} options={["Your Profile", "Log Out"]} />
                 </div>
                 <div className='flex justify-center items-center rounded-lg px-1 py-2 my-2 md:hidden'>
                     <DropDown dropdown_text={"Withdraw"} options={["Swap", "Rates"]} />
-                    <DropDown dropdown_text={"more-options"} options={["Get Started", "Help", "Your Profile", "Log Out"]} />
+                    <DropDown dropdown_text={"mobile-more-options"} options={["Get Started", "Help", "Your Profile", "Log Out"]} />
                 </div>
             </div>
             }
@@ -83,11 +82,11 @@ export default function NavBar({ operation }) {
                 <div className="hidden md:flex justify-center items-center py-2">
                     <Button bg_color={"blue"} text={"Get Started"} size={"small"} />
                     <Button bg_color={"white"} text={"Help"} size={"small"} />
-                    <img src={options_icon} alt="Options" className="h-6 w-6 mx-1 cursor-pointer" />
+                    <DropDown dropdown_text={"desktop-more-options"} options={["Your Profile", "Log Out"]} />
                 </div>
                 <div className='flex justify-center items-center rounded-lg px-1 py-2 my-2 md:hidden'>
                     <DropDown dropdown_text={"Rates"} options={["Swap","Withdraw"]} />
-                    <DropDown dropdown_text={"more-options"} options={["Get Started", "Help", "Your Profile", "Log Out"]} />
+                    <DropDown dropdown_text={"mobile-more-options"} options={["Get Started", "Help", "Your Profile", "Log Out"]} />
                 </div>
             </div>
             }

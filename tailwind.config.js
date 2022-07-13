@@ -9,7 +9,7 @@ module.exports = {
       'red-variant': '#C82D2D',
       'blue-primary': '#3379D5',
       'blue-primary-variant': '#235DA9',
-      'blue-secondary': '#273868',
+      'blue-secondary': '#2A4365',
       'blue-tertiary': '#1F2C40',
       'blue-background': '#01131E'
     },
