@@ -5,7 +5,6 @@ import Withdraw from './Withdraw';
 import Login from './Login';
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import Rates from './Rates';
-import AccountDetailsInput from './AccountDetailsInput';
 
 function App() {
   return (
@@ -17,7 +16,6 @@ function App() {
           <Route path='/withdraw' element={<Withdraw />} />
           <Route path='/rates' element={<Rates />} />
           <Route path='/signup' element={<Signup />} />
-          <Route path='/accountdetails' element={<AccountDetailsInput />} />
           <Route path='/' element={<Login />} />
         </Routes>
       </Router>

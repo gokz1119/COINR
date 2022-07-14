@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Input({ placeholder, isDisabled, type }) {
+export default function Input({ placeholder, isDisabled, type, value, setValue }) {
     return (
         <>
             {(!isDisabled && type === 'number') &&
@@ -23,8 +23,10 @@ export default function Input({ placeholder, isDisabled, type }) {
                     text-left border-none w-full m-1 my-3 px-2 py-2 tracking-wide focus:outline-none 
                     placeholder:text-white'
                     placeholder={placeholder}
+                    value={value}
                     onFocus={(e) => e.target.placeholder = ''}
-                    onBlur={(e) => e.target.placeholder = placeholder} />
+                    onBlur={(e) => e.target.placeholder = placeholder}
+                    onChange={(e) => setValue(e.target.value)} />
             }
         </>
     )
