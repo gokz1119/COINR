@@ -21,13 +21,13 @@ table {
 	width: 800px;
 	border-collapse: collapse;
 	overflow: hidden;
-	box-shadow: 0 0 20px rgba(0,0,0,0.1);
+	box-shadow: 0 0 20px #0000001a;
 }
 
 th,
 td {
 	padding: 15px;
-	background-color: rgba(255,255,255,0.2);
+	background-color: #ffffff33;
 	color: #fff;
 }
 
@@ -44,7 +44,7 @@ thead {
 tbody {
 	tr {
 		&:hover {
-			background-color: rgba(255,255,255,0.3);
+			background-color: #ffffff4d;
 		}
 	}
 	td {
@@ -57,7 +57,7 @@ tbody {
 				right: 0;
 				top: -9999px;
 				bottom: -9999px;
-				background-color: rgba(255,255,255,0.2);
+				background-color: #ffffff33;
 				z-index: -1;
 			}
 		}

@@ -26,11 +26,11 @@ export default function NavBar({ operation }) {
                     <div className="hidden md:flex justify-center items-center py-2">
                         <Button bg_color={"blue"} text={"Get Started"} size={"small"} />
                         <Button bg_color={"white"} text={"Help"} size={"small"} />
-                        <DropDown dropdown_text={"desktop-more-options"} options={["Your Profile", "Log Out"]} />
+                        <DropDown dropdown_text={"desktop-more-options"} options={["Log Out"]} />
                     </div>
                     <div className='flex justify-center items-center rounded-lg px-1 py-2 my-2 md:hidden'>
                         <DropDown dropdown_text={"Swap"} options={["Withdraw", "Rates"]} />
-                        <DropDown dropdown_text={"mobile-more-options"} options={["Get Started", "Help", "Your Profile", "Log Out"]} />
+                        <DropDown dropdown_text={"mobile-more-options"} options={["Get Started", "Help", "Log Out"]} />
                     </div>
                 </div>
             }
@@ -54,11 +54,11 @@ export default function NavBar({ operation }) {
                 <div className="hidden md:flex justify-center items-center py-2">
                     <Button bg_color={"blue"} text={"Get Started"} size={"small"} />
                     <Button bg_color={"white"} text={"Help"} size={"small"} />
-                    <DropDown dropdown_text={"desktop-more-options"} options={["Your Profile", "Log Out"]} />
+                    <DropDown dropdown_text={"desktop-more-options"} options={["Log Out"]} />
                 </div>
                 <div className='flex justify-center items-center rounded-lg px-1 py-2 my-2 md:hidden'>
                     <DropDown dropdown_text={"Withdraw"} options={["Swap", "Rates"]} />
-                    <DropDown dropdown_text={"mobile-more-options"} options={["Get Started", "Help", "Your Profile", "Log Out"]} />
+                    <DropDown dropdown_text={"mobile-more-options"} options={["Get Started", "Help", "Log Out"]} />
                 </div>
             </div>
             }
@@ -82,11 +82,11 @@ export default function NavBar({ operation }) {
                 <div className="hidden md:flex justify-center items-center py-2">
                     <Button bg_color={"blue"} text={"Get Started"} size={"small"} />
                     <Button bg_color={"white"} text={"Help"} size={"small"} />
-                    <DropDown dropdown_text={"desktop-more-options"} options={["Your Profile", "Log Out"]} />
+                    <DropDown dropdown_text={"desktop-more-options"} options={["Log Out"]} />
                 </div>
-                <div className='flex justify-center items-center rounded-lg px-1 py-2 my-2 md:hidden'>
+                <div className='flex justify-center items-center rounded-lg px-1 py-2 my-2 md:hidden z-10'>
                     <DropDown dropdown_text={"Rates"} options={["Swap","Withdraw"]} />
-                    <DropDown dropdown_text={"mobile-more-options"} options={["Get Started", "Help", "Your Profile", "Log Out"]} />
+                    <DropDown dropdown_text={"mobile-more-options"} options={["Get Started", "Help", "Log Out"]} />
                 </div>
             </div>
             }

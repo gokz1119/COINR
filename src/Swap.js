@@ -1,5 +1,4 @@
-import React from 'react'
-import settings_icon from './Icons/settings.svg'
+import { React,useState } from 'react'
 import eth_icon from './Icons/ethereum.svg'
 import rupee_icon from './Icons/rupee-sign-solid.svg'
 import swap_icon from './Icons/swap.svg'
@@ -8,18 +7,19 @@ import Button from './Button'
 import NavBar from './NavBar'
 
 export default function Swap() {
+    const [ethVal, setEthVal] = useState(0.0)
+    const [cinrVal, setCinrVal] = useState(0.0)
     return (
         <>
             <NavBar operation={"swap"} />
             <div className='bg-blue-background w-screen h-screen flex items-center justify-center'>
                 <div className='bg-blue-tertiary shadow-lg shadow-blue-secondary rounded-xl py-3 px-4 w-auto max-w-xs md:max-w-md'>
                     <div className='pb-3 flex justify-between'>
-                        <p className='text-white text-lg ml-2'>Swap</p>
-                        <img src={settings_icon} alt="Settings" className="mr-2 cursor-pointer" />
+                        <p className='text-white text-lg ml-2 my-1'>Swap</p>
                     </div>
                     <div className='flex justify-between items-center bg-blue-secondary px-3 rounded-md'>
                         <div className='w-3/5 md:w-4/5'>
-                            <Input type={"number"} placeholder={"0.0"} isDisabled={false} />
+                            <Input type={"number"} placeholder={"0"} isDisabled={false} value={ethVal} setValue={setEthVal} setValue2={setCinrVal} />
                         </div>
                         <div className='flex justify-center items-center'>
                             <img src={eth_icon} alt="Ethereum" className="h-5 w-5" />
@@ -31,7 +31,7 @@ export default function Swap() {
                     </div>
                     <div className='flex justify-between items-center bg-blue-secondary px-3 rounded-md'>
                         <div className='w-3/5 md:w-4/5'>
-                            <Input type={"number"} placeholder={"0.0"} isDisabled={true} />
+                            <Input type={"number"} placeholder={"0.0"} value={cinrVal} isDisabled={true} />
                         </div>
                         <div className='flex justify-start items-center'>
                             <img src={rupee_icon} alt="Rupee" className="h-5 w-5" />

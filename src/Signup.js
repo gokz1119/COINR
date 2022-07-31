@@ -30,15 +30,17 @@ export default function Login() {
                             <div className='h-1 w-1/2 bg-blue-background'></div>
                         </div>
                         <div>
-                            <Input type={"text"} placeholder={"Name"} isDisabled={false} value={name} setValue={setName} />
-                            <Input type={"email"} placeholder={"Email"} isDisabled={false} value={email} setValue={setEmail} />
-                            <div className='flex flex-row-reverse'>
-                                <button className='bg-red w-24 text-center py-2 m-1 rounded-xl text-white text-xl
-                        hover:bg-red-variant transition-all ease-in-out flex justify-around items-center' onClick={() => setIsFirstPart(false)}>
-                                    <span className='pl-3'>Next</span>
-                                    <img src={next_icon} alt='Dropdown' className='w-5 h-5 mr-1.5 -rotate-90' />
-                                </button>
-                            </div>
+                            <form>
+                                <Input type={"text"} placeholder={"Name"} isDisabled={false} value={name} setValue={setName} />
+                                <Input type={"email"} placeholder={"Email"} isDisabled={false} value={email} setValue={setEmail} />
+                                <div className='flex flex-row-reverse'>
+                                    <button className='bg-red w-24 text-center py-2 m-1 rounded-xl text-white text-xl
+                        hover:bg-red-variant transition-all ease-in-out flex justify-around items-center' type='submit' onClick={() => setIsFirstPart(false)}>
+                                        <span className='pl-3'>Next</span>
+                                        <img src={next_icon} alt='Dropdown' className='w-5 h-5 mr-1.5 -rotate-90' />
+                                    </button>
+                                </div>
+                            </form>
                         </div>
                         <div className='text-white flex justify-center pt-3'>
                             <span>Already have an account?
@@ -63,24 +65,24 @@ export default function Login() {
                             <div className='h-1 w-1/2 bg-red'></div>
                         </div>
                         <div>
-                            <Input type={"text"} placeholder={"Bank Name"} isDisabled={false} value={bankName} setValue={setBankName} />
-                            <Input type={"text"} placeholder={"Branch Name"} isDisabled={false} value={branch} setValue={setBranch} />
-                            <Input type={"text"} placeholder={"Bank Account Number"} isDisabled={false} value={accNo} setValue={setAccNo} />
-                            <Input type={"text"} placeholder={"IFSC Code"} isDisabled={false} value={ifsc} setValue={setIfsc} />
-                            <div className='flex justify-between items-center'>
-                                <button className='mt-3 w-20 border border-blue-primary 
+                            <form action='/swap'>
+                                <Input type={"text"} placeholder={"Bank Name"} isDisabled={false} value={bankName} setValue={setBankName} />
+                                <Input type={"text"} placeholder={"Branch Name"} isDisabled={false} value={branch} setValue={setBranch} />
+                                <Input type={"text"} placeholder={"Bank Account Number"} isDisabled={false} value={accNo} setValue={setAccNo} />
+                                <Input type={"text"} placeholder={"IFSC Code"} isDisabled={false} value={ifsc} setValue={setIfsc} />
+                                <div className='flex justify-between items-center'>
+                                    <div className='mt-3 w-20 border border-blue-primary 
                                     hover:border-blue-primary-variant rounded-lg text-center py-2 pr-1
                                     mx-1 flex justify-around items-center' onClick={() => setIsFirstPart(true)}>
                                         <img src={next_icon} alt='Dropdown' className='w-5 h-5 ml-1.5 rotate-90' />
                                         <span className='pr-1 text-lg text-blue-primary'>Back</span>
-                                    </button>
-                                <a href='/swap' className='mt-3'>
+                                    </div>
                                     <button className='bg-red w-24 text-center py-2 mx-1 rounded-xl text-white text-xl
-                hover:bg-red-variant transition-all ease-in-out flex justify-around items-center'>
-                                    Sign Up
+                hover:bg-red-variant transition-all ease-in-out flex justify-around items-center' type='submit'>
+                                        Sign Up
                                     </button>
-                                </a>
-                            </div>
+                                </div>
+                            </form>
                         </div>
                         <div className='text-white flex justify-center pt-3'>
                             <span>Already have an account?
