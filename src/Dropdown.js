@@ -31,24 +31,12 @@ export default function DropDown({ dropdown_text, options }) {
                                 <div className="py-1">
                                     <Menu.Item>
                                         {({ active }) => (
-                                            <Link to={"/profile"}>
-                                                <span className={classNames(
-                                                    active ? 'bg-blue-primary-variant rounded-lg text-white' : 'text-white',
-                                                    'block px-4 py-2 text-sm'
-                                                )}>
-                                                    {options[0]}
-                                                </span>
-                                            </Link>
-                                        )}
-                                    </Menu.Item>
-                                    <Menu.Item>
-                                        {({ active }) => (
                                             <Link to={"/"}>
                                                 <span className={classNames(
                                                     active ? 'bg-blue-primary-variant rounded-lg text-white' : 'text-white',
                                                     'block px-4 py-2 text-sm'
                                                 )}>
-                                                    {options[1]}
+                                                    {options[0]}
                                                 </span>
                                             </Link>
                                         )}
@@ -100,24 +88,12 @@ export default function DropDown({ dropdown_text, options }) {
                                     </Menu.Item>
                                     <Menu.Item>
                                         {({ active }) => (
-                                            <Link to={"/profile"}>
-                                                <span className={classNames(
-                                                    active ? 'bg-blue-primary-variant rounded-lg text-white' : 'text-white',
-                                                    'block px-4 py-2 text-sm'
-                                                )}>
-                                                    {options[2]}
-                                                </span>
-                                            </Link>
-                                        )}
-                                    </Menu.Item>
-                                    <Menu.Item>
-                                        {({ active }) => (
                                             <Link to={"/"}>
                                                 <span className={classNames(
                                                     active ? 'bg-blue-primary-variant rounded-lg text-white' : 'text-white',
                                                     'block px-4 py-2 text-sm'
                                                 )}>
-                                                    {options[3]}
+                                                    {options[2]}
                                                 </span>
                                             </Link>
                                         )}

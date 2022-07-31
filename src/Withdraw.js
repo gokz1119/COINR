@@ -1,5 +1,4 @@
-import React from 'react'
-import settings_icon from './Icons/settings.svg'
+import { React, useState } from 'react'
 import rupee_icon from './Icons/rupee-sign-solid.svg'
 import arrow_icon from './Icons/arrow.svg'
 import Input from './Input'
@@ -7,18 +6,18 @@ import Button from './Button'
 import NavBar from './NavBar'
 
 export default function Withdraw() {
+    const [inrVal, setInrVal] = useState(0.0)
     return (
         <>
             <NavBar operation={"withdraw"} />
             <div className='bg-blue-background w-screen h-screen flex items-center justify-center'>
                 <div className='bg-blue-tertiary shadow-lg shadow-blue-secondary rounded-xl py-3 px-4 max-w-xs md:max-w-md'>
                     <div className='pb-3 flex justify-between'>
-                        <p className='text-white text-lg ml-2'>Withdraw</p>
-                        <img src={settings_icon} alt="Settings" className="mr-2 cursor-pointer" />
+                        <p className='text-white text-lg ml-2 my-1'>Withdraw</p>
                     </div>
                     <div className='flex justify-between items-center bg-blue-secondary px-3 rounded-md'>
                         <div className='w-3/5 md:w-4/5'>
-                            <Input type={"number"} placeholder={"0.0"} isDisabled={false} />
+                            <Input type={"number"} placeholder={"0"} value={inrVal} setValue={setInrVal} isDisabled={false} />
                         </div>
                         <div className='flex justify-center items-center'>
                             <img src={rupee_icon} alt="Rupee" className="h-5 w-5" />
@@ -30,7 +29,7 @@ export default function Withdraw() {
                     </div>
                     <div className='flex justify-between items-center bg-blue-secondary px-3 rounded-md'>
                         <div className='w-3/5 md:w-4/5'>
-                            <Input type={"number"} placeholder={"0.0"} isDisabled={true} />
+                            <Input type={"number"} placeholder={"0.0"} value={inrVal} isDisabled={true} />
                         </div>
                         <div className='flex justify-start items-center pr-3 md:pr-0'>
                             <img src={rupee_icon} alt="Ethereum" className="h-5 w-5" />
