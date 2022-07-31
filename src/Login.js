@@ -1,5 +1,6 @@
 import { React, useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import Button from './Button';
 import eth_illustration from './Icons/ethereum-illustration.svg'
 
 function isMobileDevice() {
@@ -60,9 +61,15 @@ function Connect({ setUserAddress }) {
     );
 }
 
-export default function Login() {
-    const [userAddress, setUserAddress] = useState("");
+function ChangePage({ walletAddress, setWalletAddress, userAddress }) {
     const navigate = useNavigate();
+    setWalletAddress(userAddress);
+    console.log("Wallet address:", walletAddress);
+    navigate('/swap');
+}
+
+export default function Login({ walletAddress, setWalletAddress }) {
+    const [userAddress, setUserAddress] = useState("");
 
     useEffect(() => {
         checkIfWalletIsConnected(setUserAddress);
@@ -78,15 +85,13 @@ export default function Login() {
                     <span className="text-blue-primary text-3xl pl-2">CO</span>
                     <span className="text-red text-3xl">INR</span>
                 </div>
-                {/* <a href='/swap'>
-                    <button className="bg-red text-white text-xl w-full py-2 m-1 rounded-xl
-                hover:bg-red-variant transition-all ease-in-out" >
-                        Login with Metamask
-                    </button>
-                </a> */}
+
                 {userAddress &&
                     <>
-                    {navigate('/swap')}
+                        <ChangePage walletAddress={walletAddress} setWalletAddress={setWalletAddress} userAddress={userAddress} />
+                        <Link to={'/swap'}>
+                            <Button bg_color={"red"} text={"Go to Swap page"} size={"large"} />
+                        </Link>
                     </>
                 }
                 {!userAddress &&
