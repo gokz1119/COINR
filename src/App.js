@@ -6,6 +6,8 @@ import Login from './Login';
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import Rates from './Rates';
 
+export const contractAddress = "0x8f82274d2e11aabd6AAd56B24A49972Fa731B4cB";
+
 function App() {
   return (
     <>
