@@ -3,6 +3,8 @@ import { Link, useNavigate } from 'react-router-dom'
 import Button from './Button';
 import eth_illustration from './Icons/ethereum-illustration.svg'
 
+export const ethereum = window.ethereum;
+
 function isMobileDevice() {
     return 'ontouchstart' in window || 'onmsgesturechange' in window;
 }
