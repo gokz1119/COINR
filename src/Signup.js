@@ -1,5 +1,7 @@
 import { React, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { collection, addDoc } from 'firebase/firestore'
+import { Link, useNavigate } from 'react-router-dom'
+import { db } from './firebase'
 import eth_illustration from './Icons/ethereum-illustration.svg'
 import Input from './Input'
 import next_icon from './Icons/arrow-drop-down.svg'
@@ -13,6 +15,31 @@ export default function Login() {
     const [ifsc, setIfsc] = useState('')
 
     const [isFirstPart, setIsFirstPart] = useState(true)
+
+    const navigate = useNavigate();
+
+    const addUser = async (e) => {
+        e.preventDefault();
+        if (name !== '' && email !== '' && bankName !== '' && branch !== '' && accNo !== '' && ifsc !== '') {
+            await addDoc(collection(db, "Users"), {
+                name: name,
+                email: email,
+                bankName: bankName,
+                bankBranch: branch,
+                accNo: accNo,
+                ifsc: ifsc
+            });
+        }
+        alert("Added user successfully! Revisit the login page to continue");
+        setName('');
+        setEmail('');
+        setBankName('');
+        setBranch('');
+        setAccNo('');
+        setIfsc('');
+        navigate('/');
+    }
+
     return (
         <>
             {isFirstPart &&
@@ -65,7 +92,7 @@ export default function Login() {
                             <div className='h-1 w-1/2 bg-red'></div>
                         </div>
                         <div>
-                            <form action='/swap'>
+                            <form action='/swap' onSubmit={addUser}>
                                 <Input type={"text"} placeholder={"Bank Name"} isDisabled={false} value={bankName} setValue={setBankName} />
                                 <Input type={"text"} placeholder={"Branch Name"} isDisabled={false} value={branch} setValue={setBranch} />
                                 <Input type={"text"} placeholder={"Bank Account Number"} isDisabled={false} value={accNo} setValue={setAccNo} />
@@ -78,7 +105,7 @@ export default function Login() {
                                         <span className='pr-1 text-lg text-blue-primary'>Back</span>
                                     </div>
                                     <button className='bg-red w-24 text-center py-2 mx-1 rounded-xl text-white text-xl
-                hover:bg-red-variant transition-all ease-in-out flex justify-around items-center' type='submit'>
+                hover:bg-red-variant transition-all ease-in-out flex justify-around items-center'>
                                         Sign Up
                                     </button>
                                 </div>
