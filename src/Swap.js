@@ -94,7 +94,7 @@ export default function Swap({ contractAddress, abi, walletAddress }) {
                         {hash &&
                             <>
                                 <p>Transaction Hash:</p>
-                                <p className='text-blue-primary'>{hash}</p>
+                                <p className='text-blue-primary break-all md:break-normal'>{hash}</p>
                             </>
                         }
                         {blockNo &&
