@@ -64,7 +64,7 @@ export default function DropDown({ dropdown_text, options }) {
                                 <div className="py-1">
                                     <Menu.Item>
                                         {({ active }) => (
-                                            <Link to={"/getstarted"}>
+                                            <Link to={"/signup"}>
                                                 <span className={classNames(
                                                     active ? 'bg-blue-primary-variant rounded-lg text-white' : 'text-white',
                                                     'block px-4 py-2 text-sm'
@@ -74,18 +74,34 @@ export default function DropDown({ dropdown_text, options }) {
                                             </Link>
                                         )}
                                     </Menu.Item>
-                                    <Menu.Item>
-                                        {({ active }) => (
-                                            <Link to={"/help"}>
-                                                <span className={classNames(
-                                                    active ? 'bg-blue-primary-variant rounded-lg text-white' : 'text-white',
-                                                    'block px-4 py-2 text-sm'
-                                                )}>
-                                                    {options[1]}
-                                                </span>
-                                            </Link>
-                                        )}
-                                    </Menu.Item>
+                                    {options[1] &&
+                                        <Menu.Item>
+                                            {({ active }) => (
+                                                <Link to={"/help"}>
+                                                    <span className={classNames(
+                                                        active ? 'bg-blue-primary-variant rounded-lg text-white' : 'text-white',
+                                                        'block px-4 py-2 text-sm'
+                                                    )}>
+                                                        {options[1]}
+                                                    </span>
+                                                </Link>
+                                            )}
+                                        </Menu.Item>
+                                    }
+                                    {options[2] &&
+                                        <Menu.Item>
+                                            {({ active }) => (
+                                                <Link to="/">
+                                                    <span className={classNames(
+                                                        active ? 'bg-blue-primary-variant rounded-lg text-white' : 'text-white',
+                                                        'block px-4 py-2 text-sm'
+                                                    )}>
+                                                        {options[2]}
+                                                    </span>
+                                                </Link>
+                                            )}
+                                        </Menu.Item>
+                                    }
                                 </div>
                             </Menu.Items>
                         </Transition>

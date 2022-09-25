@@ -7,8 +7,9 @@ import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import Rates from './Rates';
 import { useState } from 'react';
 import contract from './contracts/abi.json';
+import Help from './Help';
 
-export const contractAddress = "0x0003d4c593862364a41e8062E6bd440F16bd3448";
+export const contractAddress = process.env.REACT_APP_CONTRACT_ADDRESS;
 export const abi = contract["output"].abi;
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
               <Route path='/withdraw' element={<Withdraw />} />
               <Route path='/rates' element={<Rates />} />
               <Route path='/signup' element={<Signup />} />
+              <Route path='/help' element={<Help />} />
               <Route path='/' element={<Login walletAddress={walletAddress} setWalletAddress={setWalletAddress} />} />
             </>
           }
@@ -34,6 +36,7 @@ function App() {
               <Route path='/withdraw' element={<Login walletAddress={walletAddress} setWalletAddress={setWalletAddress} />} />
               <Route path='/rates' element={<Login walletAddress={walletAddress} setWalletAddress={setWalletAddress} />} />
               <Route path='/signup' element={<Signup />} />
+              <Route path='/help' element={<Help />} />
               <Route path='/' element={<Login walletAddress={walletAddress} setWalletAddress={setWalletAddress} />} />
             </>
           }
