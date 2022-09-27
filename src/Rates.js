@@ -2,9 +2,9 @@ import { React } from 'react'
 import NavBar from './NavBar'
 
 export default function Rates() {
-  const today = 134764.55
-  const oneMonthAgo = 84496.99
-  const oneYearAgo = 188932.35
+  const today = 111147.83
+  const oneMonthAgo = 119523.80
+  const oneYearAgo = 216098.46
   return (
     <>
       <NavBar operation={"rates"} />
